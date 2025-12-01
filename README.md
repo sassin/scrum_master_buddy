@@ -50,7 +50,7 @@ Reads TXT      Reads JSON     Reads retro  Reads all docs   Google       MCP Git
 
 
 
-Data Structure:
+Data Structure of a sample project names SprintCompass:
 SprintCompass/
 │
 ├── project_overview.txt
