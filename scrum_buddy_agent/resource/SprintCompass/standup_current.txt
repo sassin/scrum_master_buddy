@@ -1,0 +1,36 @@
+Date: 2025-11-20
+[09:00] Rohan: Morning team. Sprint 4 Day 4 standup. Same pattern — yesterday, today, blockers. Aarav, you’re up.
+
+[09:01] Aarav:
+Yesterday I implemented the core parsing flow for SC-105 and we now extract per-person yesterday, today, and blockers from the transcript.  
+Today I’ll add follow-up action extraction and wire the parsed JSON into the internal API that Scrum Buddy will call later.  
+Blocker: I’m seeing a couple of edge cases where the parser confuses back-to-back messages from the same person — I’ll need a bit of time to tune that.
+
+[09:03] Rohan: Sounds good, log those edge cases so we can add them to tests. Maya?
+
+[09:04] Maya:
+Yesterday I connected the stand-up summary widget for SC-106 to Aarav’s mocked SC-105 output and fixed a layout glitch in dark mode.  
+Today I’ll focus on finishing the details panel that expands each person’s updates and I’ll fix the sprint label bug in SC-109.  
+Blocker: None, assuming the API shape from SC-105 doesn’t change again.
+
+[09:06] Rohan: Aarav, try to keep the current shape stable. Lucas?
+
+[09:07] Lucas:
+Yesterday I finished most of the RBAC logic for SC-107 and added basic audit logging for restricted endpoints.  
+Today I’ll hook the RBAC into the stand-up and capacity APIs and run some performance checks to make sure the extra checks don’t slow things down.  
+Blocker: I need clarity on whether stakeholders should see per-person details or only aggregate metrics — that affects a couple of rules.
+
+[09:09] Rohan: Good call. Elena and I will finalize that right after this. Sofia?
+
+[09:09] Sofia:
+Yesterday I created a regression checklist for SC-108 and ran through the happy path for the new stand-up widget and RBAC rules.  
+Today I’ll add test cases for the edge cases Aarav mentioned in SC-105 and verify that bug SC-109 is fixed once Maya pushes her changes.  
+Blocker: I still don’t have a reliable way to generate dummy transcripts with mixed speakers; I might need a small script or sample set.
+
+[09:11] Rohan: Let’s create a small sample pack of transcripts today and reuse it going forward. Elena, anything to add?
+
+[09:11] Elena:
+Nothing major — I updated the epic notes for SC-EPIC-1 and SC-EPIC-2 so they better reflect the stand-up insights goal. I’ll review the UI with Maya this afternoon.
+
+[09:12] Rohan:
+Great. Action items from me — finalize stakeholder visibility rules for SC-107 with Elena, confirm the API contract stability for SC-105, and help Sofia get a repeatable transcript sample set in place. Nice momentum, let’s keep Sprint 4 moving.

@@ -1,0 +1,36 @@
+Project Timeline – Sprint Compass
+
+Sprint 1:
+- Defined user onboarding lifecycle
+- Created initial backend scaffolding for session handling
+- Drafted first version of onboarding UI wireframes
+
+Sprint 2:
+- Completed session handler implementation
+- Added onboarding dashboard tile mockups
+- Integrated CICD test runners for the first time
+
+Sprint 3:
+- Delivered API stubs for onboarding services
+- Connected UI mocks with API placeholders
+- Expanded QA regression suite
+- Finalized role-based access design
+
+Sprint 4 (Current Sprint):
+- STORY-304: Onboarding API wiring (Aarav)
+- STORY-301: Dashboard onboarding tiles UI (Maya)
+- STORY-309: Role-based access middleware (Lucas)
+- QA: Regression on BUG-441 and exploratory tests on new onboarding flow (Sofia)
+
+Upcoming Milestones:
+
+Sprint 5:
+- Accessibility compliance checks
+- Performance tuning for auth/session handler
+- Dashboard personalization logic
+
+Sprint 6:
+- Feature freeze
+- UAT and stakeholder review
+- Final documentation + internal training
+- Release candidate build

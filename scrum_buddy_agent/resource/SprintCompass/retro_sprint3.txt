@@ -1,0 +1,27 @@
+Sprint 3 Retrospective – Sprint Compass
+
+Sprint Summary:
+Committed Story Points: 34
+Completed Story Points: 29
+Sprint Velocity: 29
+Burndown Observation:
+Burndown remained steady for the first week.
+
+
+What Went Well:
+- Backend and frontend pairing reduced integration issues.
+- QA caught major onboarding regressions early.
+- Role-based access design was finalized ahead of schedule.
+- Cross-team communication improved significantly.
+
+What Didn’t Go Well:
+- UX icon updates arrived late, blocking Maya for a day.
+- Mock session data was inconsistent across environments.
+- Pipeline version mismatch caused two failed builds.
+- The final three points slipped due to delayed UX deliverables.
+
+Action Items:
+- Establish a single source of truth for test data.
+- Add automated version compatibility checks.
+- Assign explicit ownership for UX dependencies.
+- Improve API contract documentation before development begins.

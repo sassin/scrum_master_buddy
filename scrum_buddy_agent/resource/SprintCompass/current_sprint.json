@@ -1,0 +1,126 @@
+{
+  "sprint_name": "Sprint 4 – Stand-up Insights & Access Control",
+  "sprint_goal": "Ship an MVP of stand-up insights and tighten access control on the dashboard.",
+  "issues": [
+    {
+      "key": "SC-104",
+      "summary": "Ingest Teams stand-up transcripts into SprintCompass",
+      "description": "Build a service that accepts daily Teams stand-up transcripts (as text files) and stores them with date, participants, and sprint metadata.",
+      "issue_type": "Story",
+      "status": "In Progress",
+      "priority": "High",
+      "story_points": 5,
+      "assignee": "Aarav",
+      "reporter": "Rohan",
+      "sprint": "Sprint 4",
+      "epic_link": "SC-EPIC-1",
+      "labels": ["standup", "ingestion", "mvp"],
+      "acceptance_criteria": [
+        "Given a valid transcript file for a stand-up, when the ingestion job runs, then the file is stored with date and sprint metadata.",
+        "PM can query transcripts for a given date range via internal API.",
+        "Malformed or empty transcripts are rejected with a clear error log."
+      ],
+      "linked_issues": []
+    },
+    {
+      "key": "SC-105",
+      "summary": "Parse transcripts into per-person updates, blockers, and actions",
+      "description": "Extend the ingestion pipeline to parse daily stand-up transcripts and extract per-person yesterday/today/blockers plus follow-up actions.",
+      "issue_type": "Story",
+      "status": "In Progress",
+      "priority": "Highest",
+      "story_points": 8,
+      "assignee": "Aarav",
+      "reporter": "Elena",
+      "sprint": "Sprint 4",
+      "epic_link": "SC-EPIC-1",
+      "labels": ["standup", "nlp", "agent-input"],
+      "acceptance_criteria": [
+        "For each participant in the transcript, updates are grouped under yesterday, today, and blockers where available.",
+        "Follow-up actions with clear owners are extracted into a structured list.",
+        "Parsed output is stored in a format consumable by the Scrum Buddy agent."
+      ],
+      "linked_issues": ["SC-104"]
+    },
+    {
+      "key": "SC-106",
+      "summary": "Build stand-up summary widget for SprintCompass dashboard",
+      "description": "Create a UI widget that shows the latest stand-up summary by person: closed items, in-progress items, and blockers.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "High",
+      "story_points": 5,
+      "assignee": "Maya",
+      "reporter": "Rohan",
+      "sprint": "Sprint 4",
+      "epic_link": "SC-EPIC-2",
+      "labels": ["frontend", "standup", "dashboard"],
+      "acceptance_criteria": [
+        "Dashboard shows each team member with counts of done / in progress / blockers for the last stand-up.",
+        "Clicking a person opens detailed notes for yesterday, today, and blockers.",
+        "Widget supports dark mode and responsive layout."
+      ],
+      "linked_issues": ["SC-105"]
+    },
+    {
+      "key": "SC-107",
+      "summary": "Implement role-based access control (RBAC) for dashboard views",
+      "description": "Add RBAC to ensure only authorized users (PM, PO) can see certain metrics such as individual velocity and risk flags.",
+      "issue_type": "Story",
+      "status": "In Progress",
+      "priority": "High",
+      "story_points": 8,
+      "assignee": "Lucas",
+      "reporter": "Elena",
+      "sprint": "Sprint 4",
+      "epic_link": "SC-EPIC-3",
+      "labels": ["backend", "security", "rbac"],
+      "acceptance_criteria": [
+        "Roles defined for PM, Engineer, QA, and Stakeholder.",
+        "Unauthorized users cannot access restricted widgets or APIs.",
+        "Access violations are logged with user, endpoint, and time."
+      ],
+      "linked_issues": []
+    },
+    {
+      "key": "SC-108",
+      "summary": "Regression and exploratory testing for Sprint 4 features",
+      "description": "Run regression and exploratory testing for transcript ingestion, parsing, and dashboard visualization for stand-up insights and RBAC.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "High",
+      "story_points": 5,
+      "assignee": "Sofia",
+      "reporter": "Rohan",
+      "sprint": "Sprint 4",
+      "epic_link": "SC-EPIC-2",
+      "labels": ["qa", "regression", "exploratory"],
+      "acceptance_criteria": [
+        "Regression suite passes for core flows.",
+        "Critical and high bugs are triaged and linked to this story.",
+        "Test notes for exploratory testing are attached to the ticket."
+      ],
+      "linked_issues": ["SC-104", "SC-105", "SC-106", "SC-107"]
+    },
+    {
+      "key": "SC-109",
+      "summary": "Bug: Stand-up widget shows wrong sprint for some dates",
+      "description": "Fix bug where the stand-up summary widget sometimes labels a stand-up as the wrong sprint when dates are near sprint boundaries.",
+      "issue_type": "Bug",
+      "status": "In Review",
+      "priority": "Medium",
+      "story_points": 3,
+      "assignee": "Maya",
+      "reporter": "Elena",
+      "sprint": "Sprint 4",
+      "epic_link": "SC-EPIC-2",
+      "labels": ["bug", "frontend", "sprint-mapping"],
+      "acceptance_criteria": [
+        "Stand-ups within a sprint’s start and end dates always map to the correct sprint.",
+        "Off-by-one date errors at boundaries are covered by automated tests.",
+        "PO validates the mapping on staging with at least three sprint examples."
+      ],
+      "linked_issues": ["SC-106"]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "target_sprint": "Sprint 5 – Risk & Trend Insights",
+  "backlog_items": [
+    {
+      "key": "SC-201",
+      "summary": "Show trend of blockers over last 5 stand-ups",
+      "description": "Add a visualization that shows how many blockers were reported per day over the last five stand-ups, grouped by person.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "High",
+      "story_points": 5,
+      "epic_link": "SC-EPIC-2",
+      "labels": ["trend", "risk", "standup"],
+      "acceptance_criteria": [
+        "Trend chart shows blockers per person per day for the last 5 stand-ups.",
+        "PM can filter by person and by sprint.",
+        "Edge case: missing stand-ups shown as zero blockers, not blank."
+      ]
+    },
+    {
+      "key": "SC-202",
+      "summary": "Velocity and capacity summary panel",
+      "description": "Add a panel to summarize team capacity vs completed story points for the current and last two sprints.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "High",
+      "story_points": 8,
+      "epic_link": "SC-EPIC-2",
+      "labels": ["velocity", "capacity"],
+      "acceptance_criteria": [
+        "Panel shows planned vs completed story points for last 3 sprints.",
+        "Capacity is derived from a capacity configuration file per team member.",
+        "PM can export the summary as CSV."
+      ]
+    },
+    {
+      "key": "SC-203",
+      "summary": "Risk radar based on recurring blockers",
+      "description": "Compute recurring blockers by area (e.g., environment, UX, requirements) and show them as a risk radar chart.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "Medium",
+      "story_points": 5,
+      "epic_link": "SC-EPIC-2",
+      "labels": ["risk", "analytics"],
+      "acceptance_criteria": [
+        "Blockers are categorized into at least 4 categories (e.g., Env, Dependencies, UX, Requirements).",
+        "Radar chart highlights top 3 recurring blocker categories for the last two sprints.",
+        "Risk categories and thresholds are configurable."
+      ]
+    },
+    {
+      "key": "SC-204",
+      "summary": "API endpoint for Scrum Buddy agent to fetch parsed stand-ups",
+      "description": "Expose a secure API endpoint that returns parsed stand-up data by sprint and date, for consumption by the Scrum Buddy agent.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "Highest",
+      "story_points": 5,
+      "epic_link": "SC-EPIC-1",
+      "labels": ["api", "agent-integration"],
+      "acceptance_criteria": [
+            "Agent can request stand-up summaries filtered by date range and sprint name.",
+            "Response includes per-person updates, blockers, and follow-ups in JSON.",
+            "Endpoint requires authentication and respects RBAC rules."
+      ]
+    },
+    {
+      "key": "SC-205",
+      "summary": "Slack/Teams notification for high-risk stand-ups",
+      "description": "Send an automated notification when a stand-up contains more than a configurable number of blockers or a critical dependency risk.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "Medium",
+      "story_points": 3,
+      "epic_link": "SC-EPIC-2",
+      "labels": ["notifications", "risk"],
+      "acceptance_criteria": [
+        "Notification triggers when blockers exceed a configurable threshold.",
+        "Message includes top 3 blockers and owners.",
+        "PM can disable notifications per project."
+      ]
+    },
+    {
+      "key": "SC-206",
+      "summary": "Audit log for Scrum Buddy suggestions",
+      "description": "Log key decisions and suggestions made by Scrum Buddy (e.g., sprint planning recommendations) for audit and review.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "Low",
+      "story_points": 5,
+      "epic_link": "SC-EPIC-3",
+      "labels": ["audit", "agent"],
+      "acceptance_criteria": [
+        "Each Scrum Buddy recommendation is logged with timestamp, type, and referenced issues.",
+        "PM can filter audit log by date range and recommendation type.",
+        "Logs are accessible only to PM and PO roles."
+      ]
+    },
+    {
+      "key": "SC-207",
+      "summary": "Retro insight generator from last 3 sprints",
+      "description": "Use historical sprint and retro data to generate suggested talking points for the next retrospective.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "Medium",
+      "story_points": 8,
+      "epic_link": "SC-EPIC-1",
+      "labels": ["retro", "ai-insights"],
+      "acceptance_criteria": [
+        "Retro suggestions reference actual metrics and blocker trends.",
+        "Output is structured into 'What went well', 'What didn’t go well', and 'Experiments'.",
+        "Generated suggestions can be exported as a markdown file."
+      ]
+    },
+    {
+      "key": "SC-208",
+      "summary": "Bug: Misaligned time zones in stand-up timestamps",
+      "description": "Fix an issue where stand-up timestamps are stored in mixed time zones when uploaded from different machines.",
+      "issue_type": "Bug",
+      "status": "To Do",
+      "priority": "Medium",
+      "story_points": 3,
+      "epic_link": "SC-EPIC-1",
+      "labels": ["bug", "timezone"],
+      "acceptance_criteria": [
+        "All stored stand-up timestamps are normalized to UTC.",
+        "UI displays timestamps in the team’s configured local time zone.",
+        "Migration script backfills timestamps for existing stand-ups."
+      ]
+    },
+    {
+      "key": "SC-209",
+      "summary": "Spike: Evaluate cost of transcript storage over 12 months",
+      "description": "Estimate storage and compute cost for keeping daily stand-up transcripts and parsed data for one year.",
+      "issue_type": "Spike",
+      "status": "To Do",
+      "priority": "Low",
+      "story_points": 3,
+      "epic_link": "SC-EPIC-1",
+      "labels": ["spike", "cost"],
+      "acceptance_criteria": [
+        "Document current and projected storage needs for transcripts and parsed data.",
+        "Provide at least two cost-optimization options.",
+        "Output is a short decision doc linked to this ticket."
+      ]
+    },
+    {
+      "key": "SC-210",
+      "summary": "Improve definition of done checklist in UI",
+      "description": "Add a configurable Definition of Done (DoD) checklist to each story in the SprintCompass UI to align with team agreements.",
+      "issue_type": "Story",
+      "status": "To Do",
+      "priority": "Low",
+      "story_points": 5,
+      "epic_link": "SC-EPIC-2",
+      "labels": ["dod", "usability"],
+      "acceptance_criteria": [
+        "Each story shows a DoD checklist synced from a configuration file.",
+        "PM can update DoD items without redeploying the app.",
+        "DoD completion status is surfaced in the sprint view."
+      ]
+    }
+  ]
+}

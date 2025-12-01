@@ -1,0 +1,29 @@
+Team Working Agreement – Sprint Compass
+
+Communication:
+- Daily standup at 09:00 local time for all team members.
+- PM and PO will respond to async clarifications within 2 hours.
+- Slack/Teams channels are monitored actively during core hours.
+
+Development Workflow:
+- Branch naming: feature/<JIRA-ID>, bug/<JIRA-ID>, chore/<task>
+- All PRs require at least 1 reviewer.
+- Developers include unit + basic integration tests with each PR.
+- API contract changes must be documented and shared before implementation.
+
+QA & Testing:
+- QA is involved at story kickoff and attends all refinement sessions.
+- Shared test data must be updated in the central repository.
+- Regression tests run nightly.
+
+Meeting Norms:
+- Cameras optional but recommended for sprint ceremonies.
+- Keep discussions focused; deep dives move to follow-up sessions.
+- Respect everyone’s time — start and end meetings on schedule.
+
+Definition of Done (DoD):
+- Acceptance criteria fulfilled
+- PR reviewed and approved
+- Tests passing (unit, integration, regression if required)
+- QA validated
+- Documentation updated if applicable

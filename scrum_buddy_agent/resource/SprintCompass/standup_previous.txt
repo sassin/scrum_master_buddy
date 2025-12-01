@@ -1,0 +1,36 @@
+Date: 2025-11-19
+[09:00] Rohan: Morning team. Sprint 4 Day 3 standup. Same flow — yesterday, today, blockers. Aarav, start us off.
+
+[09:01] Aarav:
+Yesterday I wired the transcript ingestion flow for SC-104 and got the storage layer working with date and sprint metadata.  
+Today I’m focusing on the parsing logic for SC-105 so we can break the transcript into per-person updates and blockers.  
+Blocker: I still need a final decision on how we format the parsed JSON for the Scrum Buddy agent.
+
+[09:03] Rohan: Got it, we’ll decide the JSON shape after standup. Maya?
+
+[09:04] Maya:
+Yesterday I created the basic layout for the stand-up summary widget in SC-106 and integrated it into the SprintCompass dashboard shell.  
+Today I’ll hook up the UI to a mocked API response for SC-105 so we can see sample data on the page.  
+Blocker: I’m waiting on Aarav to freeze the field names for the parsed stand-up output, otherwise I’ll have to refactor later.
+
+[09:06] Rohan: Makes sense. Aarav and Maya, let’s sync on that right after this. Lucas?
+
+[09:07] Lucas:
+Yesterday I added the initial RBAC checks for SC-107 and wired the role definitions for PM, Engineer, QA, and Stakeholder.  
+Today I’ll tighten the access rules on the stand-up and capacity endpoints and add audit logs when someone hits a restricted route.  
+No blockers right now.
+
+[09:09] Rohan: Thanks. Sofia?
+
+[09:09] Sofia:
+Yesterday I completed smoke tests on the ingestion path for SC-104 and logged one bug around malformed transcript handling.  
+Today I’ll start writing regression tests for SC-108 focusing on the combination of RBAC rules from SC-107 and the new stand-up widget in SC-106.  
+Blocker: I need a stable dev URL and test credentials for each role to cover the access matrix properly.
+
+[09:11] Rohan: I’ll send out the latest dev URL and test accounts after this. Elena, anything from your side?
+
+[09:11] Elena:
+Quick note — I reviewed the acceptance criteria for SC-104 and SC-105 and added a couple of clarifications about error handling and missing speakers. I’ll share those in the channel. No other updates.
+
+[09:12] Rohan:
+Perfect. I’ll follow up on three items — JSON format decision for SC-105, role-based test accounts for Sofia, and finalizing the widget data contract for SC-106. Let’s keep Sprint 4 on track.

@@ -1,0 +1,17 @@
+Project Name: Sprint Compass – Onboarding & Access Workflow
+
+Overview:
+Sprint Compass is an internal initiative to modernize the onboarding, authentication, and session-management flow for the company’s learning platform. The goal is to create a unified onboarding experience that includes streamlined account creation, stable role-based access, consistent dashboard loading, and improved API performance.
+
+The project is currently in Sprint 4 and focuses on strengthening the onboarding API, completing role-based access middleware, validating UI onboarding tiles, and expanding QA test coverage for cross-device consistency.
+
+Team Members:
+- Aarav – Backend Engineer
+- Maya – Frontend Engineer
+- Lucas – Platform Engineer
+- Sofia – QA Engineer
+- Rohan – Project Manager
+- Elena – Product Owner
+
+Sprint Goal:
+Deliver a stable, end-to-end onboarding flow including API → UI → QA validation, enabling the team to begin accessibility and performance improvements in Sprint 5.

@@ -1,0 +1,42 @@
+{
+  "sprint_name": "Sprint 5 – Risk & Trend Insights",
+  "sprint_length_days": 10,
+  "team_capacity": [
+    {
+      "name": "Aarav",
+      "role": "Backend Engineer",
+      "working_days": 9,
+      "hours_per_day": 6.5,
+      "planned_pto_days": 1,
+      "focus_factor": 0.75,
+      "estimated_capacity_story_points": 16
+    },
+    {
+      "name": "Maya",
+      "role": "Frontend Engineer",
+      "working_days": 10,
+      "hours_per_day": 6,
+      "planned_pto_days": 0,
+      "focus_factor": 0.8,
+      "estimated_capacity_story_points": 18
+    },
+    {
+      "name": "Lucas",
+      "role": "Platform Engineer",
+      "working_days": 6,
+      "hours_per_day": 5,
+      "planned_pto_days": 0,
+      "focus_factor": 0.7,
+      "estimated_capacity_story_points": 8
+    },
+    {
+      "name": "Sofia",
+      "role": "QA Engineer",
+      "working_days": 10,
+      "hours_per_day": 6,
+      "planned_pto_days": 0,
+      "focus_factor": 0.85,
+      "estimated_capacity_story_points": 14
+    }
+  ]
+}
