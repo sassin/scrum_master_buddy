@@ -64,3 +64,14 @@ SprintCompass/
 
 Sample Data:
 The json files and txt files all are just representative of project artifacts, in the production version this should be linked to JIRA, confluence or other project management tools where the agent can find the sprint, backlog, call transcript and project artifacts.
+
+#Run Root Agent
+adk run scrum_buddy_agent
+
+#Example Input:
+Summarize the most recent standup.
+Plan the next sprint.
+Give me the project summary.
+What did we learn from the last sprint?
+What is the best practice for spillover?
+Fetch GitHub issues for current sprint.
