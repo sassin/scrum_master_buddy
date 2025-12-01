@@ -61,3 +61,6 @@ SprintCompass/
 ├── sprint_capacity.json
 └── standup_current.txt
 
+
+Sample Data:
+The json files and txt files all are just representative of project artifacts, in the production version this should be linked to JIRA, confluence or other project management tools where the agent can find the sprint, backlog, call transcript and project artifacts.
