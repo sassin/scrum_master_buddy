@@ -8,12 +8,14 @@ from google.adk.agents import Agent
 from google.adk.tools import AgentTool, FunctionTool
 from google.api_core import retry
 from google.adk.sessions import InMemorySessionService
+from google.adk.apps.app import EventsCompactionConfig
 from google.adk.runners import Runner
 from google.adk.tools.tool_context import ToolContext
 from google.genai import types
 from pathlib import Path
 from google.adk.models.google_llm import Gemini
 from google.adk.runners import InMemoryRunner
+from google.adk.apps.app import App, ResumabilityConfig
 from google.adk.plugins.logging_plugin import (
     LoggingPlugin,
 )
@@ -38,6 +40,12 @@ USER_ID = "default"  # User
 SESSION = "default"  # Session
 MODEL_NAME = "gemini-2.5-flash-lite"
 session_service = InMemorySessionService()
+
+events_compaction_config=EventsCompactionConfig(
+    compaction_interval=3,
+    overlap_size=1,
+)
+
 
 root_agent = Agent(
     name="scrum_master_buddy",
@@ -90,13 +98,17 @@ tools=[ AgentTool(ProjectSummaryAgent),
         ],
 )
 
-runner = Runner(
-    agent=root_agent,
-    app_name = APP_NAME,
+scrum_buddy = App(
+    name="project_coordinator",
+    root_agent=root_agent,
+    plugins=[LoggingPlugin()],
+    events_compaction_config=events_compaction_config,
+    resumability_config=ResumabilityConfig(is_resumable=True),
+)
+
+Runner(
+    app=scrum_buddy,
     session_service=session_service,
-    plugins=[
-        LoggingPlugin()
-    ],  # <---- 2. Add the plugin. Handles standard Observability logging across ALL agents
 )
 
 
